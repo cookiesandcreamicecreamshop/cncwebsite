@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Party room · Cookies & Cream</title>
+<meta name="description" content="Book the party room at Cookies & Cream in Buffalo for birthdays, showers and team nights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Gochi+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Cookies &amp; Cream</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlist" aria-label="Open menu">☰</button>
+    <nav aria-label="Main">
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="parties.html" class="active" aria-current="page">Parties</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="book.html" class="btn cherry">Book a party</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="ticker" aria-hidden="true"><div id="tickerRow"></div></div>
+
+<main>
+  <div class="phero">
+    <div class="wrap party-grid">
+      <div>
+        <h1>Party room</h1>
+        <p class="sub">Birthdays, showers, team nights and after-game hangs. Book the room, pick a package, and the scoops are ready when you walk in.</p>
+        <!-- EDIT: real capacity / length -->
+        <div class="facts"><span>Up to 30 guests</span><span>2-hour bookings</span><span>We set up and clean up</span></div>
+        <a href="book.html" class="btn ink">Book a party</a>
+      </div>
+      <!-- IMAGE: the party area set up -->
+      <figure class="polaroid" style="--r:-3deg"><div class="slot" data-src="" data-label="Image: party area set up"></div><figcaption class="cap">your party here</figcaption></figure>
+    </div>
+  </div>
+  <div class="scallop" style="--c:var(--mint)" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><h2 class="shadow">Pick a package</h2><p class="sub">We'll send pricing when we confirm your date.</p></div>
+      <!-- EDIT: package details here AND in PACKAGES in the script -->
+      <div class="pkgs">
+        <div class="pkg" style="--c:var(--mint)"><div class="top"><h3>Sprinkle</h3><p>The easy one: a scoop for everyone.</p></div>
+          <ul><li>The party room, reserved</li><li>One scoop each, cup or cone</li><li>Plates, napkins and setup</li></ul>
+          <a class="btn" href="book.html?pkg=sprinkle">Book Sprinkle</a></div>
+        <div class="pkg" style="--c:var(--pink)"><div class="top"><span class="pop">Most booked</span><h3>Sundae Social</h3><p>Everyone builds their own.</p></div>
+          <ul><li>The party room, reserved</li><li>Make-your-own sundae bar</li><li>Every topping from the jars</li><li>A host who scoops and cleans up</li></ul>
+          <a class="btn ink" href="book.html?pkg=social">Book Sundae Social</a></div>
+        <div class="pkg" style="--c:var(--butter)"><div class="top"><h3>Cookie Cake Bash</h3><p>The full birthday treatment.</p></div>
+          <ul><li>Everything in Sundae Social</li><li>A 10" ice cream cookie cake</li><li>Your message written on top</li><li>A cookie for each guest to take home</li></ul>
+          <a class="btn" href="book.html?pkg=bash">Book Cookie Cake Bash</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2 class="shadow">How it works</h2></div>
+      <div class="steps">
+        <div><span class="n">1</span><b>Send a request</b><p>Pick a shop, a date and a package. It takes about a minute.</p></div>
+        <div><span class="n">2</span><b>We confirm</b><p>We check the calendar and reply within one business day with pricing.</p></div>
+        <div><span class="n">3</span><b>Come hungry</b><p>The room is set and the scoops are ready when you arrive.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap faq">
+      <div class="head"><h2 class="shadow">Questions</h2></div>
+      <!-- EDIT: replace with your real policies -->
+      <details><summary>How far ahead should I book?</summary><p>Two to three weeks for weekends. A week is usually fine on weekdays.</p></details>
+      <details><summary>Can we bring decorations or food?</summary><p>Decorations are welcome, but no confetti or glitter. Pizza and savory snacks are fine; dessert comes from us.</p></details>
+      <details><summary>What about allergies?</summary><p>Tell us in your request. We have gluten-free cookies, but our kitchen handles nuts, gluten and dairy, so we can't promise an allergen-free space.</p></details>
+      <details><summary>Is there a deposit?</summary><p>A deposit holds your date once we confirm. We'll explain the details in our reply.</p></details>
+      <p style="margin-top:32px"><a href="book.html" class="btn cherry">Book a party</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="checker" aria-hidden="true"></div>
+  <div class="wrap foot">
+    <div><p style="max-width:32ch;font-size:1.1rem">Hand-scooped ice cream and warm cookies in Buffalo. Come hungry.</p></div>
+    <div id="footLocs" style="display:contents"></div>
+    <div><h4>More</h4><p><a href="menu.html">Menu</a><br><a href="parties.html">Parties</a><br><a href="book.html">Book a party</a><br><a href="https://www.instagram.com/cookiesandcream716/" target="_blank" rel="noopener">Instagram</a></p></div>
+  </div>
+  <div class="wrap fine"><span>© <span id="yr"></span> Cookies &amp; Cream, Buffalo NY</span><span>Made with sprinkles</span></div>
+  <div class="wordmark" aria-hidden="true">Cookies &amp; Cream</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

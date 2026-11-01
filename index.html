@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookies & Cream · Ice cream parlor in Buffalo</title>
+<meta name="description" content="Hand-scooped ice cream and warm cookies on Elmwood Ave and Seneca St in Buffalo. Book our party room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Gochi+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Cookies &amp; Cream</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlist" aria-label="Open menu">☰</button>
+    <nav aria-label="Main">
+      <ul id="navlist">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="parties.html">Parties</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="book.html" class="btn cherry">Book a party</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="ticker" aria-hidden="true"><div id="tickerRow"></div></div>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Warm cookies, cold scoops</h1>
+        <p class="sub">Buffalo's pink little parlor on Elmwood and Seneca. Ice cream scooped by hand, cookies baked every day, and sundaes built on a cookie that's still warm.</p>
+        <div class="ctas">
+          <a href="menu.html" class="btn ink">See the menu</a>
+          <a href="book.html" class="btn pink">Book a party</a>
+        </div>
+        <div class="status" id="heroStatus"></div>
+      </div>
+      <div class="collage">
+        <!-- IMAGE: the pink room / checkerboard floor -->
+        <figure class="polaroid p1"><div class="slot" data-src="" data-label="Image: the pink room"></div><figcaption class="cap">the pink room</figcaption></figure>
+        <!-- IMAGE: a cookie sundae, close up -->
+        <figure class="polaroid p2"><div class="slot" data-src="" data-label="Image: a cookie sundae"></div><figcaption class="cap">cookie sundae szn</figcaption></figure>
+        <span class="note">baked fresh today!</span>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+            <circle cx="100" cy="100" r="98" fill="#FFDF7E" stroke="#2A2E35" stroke-width="3"/>
+            <text font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="17" letter-spacing="2.6" fill="#2A2E35"><textPath href="#circ">SCOOPED BY HAND ✦ BAKED EVERY DAY ✦ </textPath></text></svg>
+          <span class="core">716</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><h2 class="shadow">The good stuff</h2><p class="sub">What people line up for.</p></div>
+      <div class="favs">
+        <a class="fav" href="menu.html#sundaes" style="--c:var(--pink);--s:#fff"><span class="scoop"></span><h3>Cookie sundaes</h3><p>A warm cookie, two scoops, hot fudge and whipped cream.</p><span class="more">See sundaes</span></a>
+        <a class="fav" href="menu.html#scoops" style="--c:var(--mint);--s:#F9B8C6"><span class="scoop"></span><h3>Scoops &amp; shakes</h3><p>Butter pecan, pistachio, strawberry cheesecake and a case that keeps changing.</p><span class="more">See flavours</span></a>
+        <a class="fav" href="menu.html#cakes" style="--c:var(--butter);--s:#7A4A2E"><span class="scoop"></span><h3>Cookie cakes</h3><p>Ice cream cookie cakes in 6" and 10". Pre-order for birthdays.</p><span class="more">See cakes</span></a>
+        <a class="fav" href="menu.html#cakes" style="--c:#fff;--s:var(--mint)"><span class="scoop"></span><h3>Bills cookies</h3><p>A dozen frosted sugar cookies in Bills colours for game day.</p><span class="more">See cookies</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop up" style="--c:var(--mint)" aria-hidden="true"></div>
+  <section class="party">
+    <div class="wrap party-grid">
+      <div>
+        <h2>Party in the parlor</h2>
+        <p class="sub">Book the room, build your own sundaes, leave the mess to us.</p>
+        <ul class="chips"><li>Birthdays</li><li>Showers</li><li>Team nights</li><li>After-game hangs</li></ul>
+        <div class="ctas"><a href="book.html" class="btn ink">Book a party</a><a href="parties.html" class="btn">How it works</a></div>
+      </div>
+      <!-- IMAGE: a party in the room -->
+      <figure class="polaroid" style="--r:3deg"><div class="slot" data-src="" data-label="Image: a party in the room"></div><figcaption class="cap">party room ♥</figcaption></figure>
+    </div>
+  </section>
+  <div class="scallop" style="--c:var(--mint)" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><h2 class="shadow">Two shops, same pink</h2></div>
+      <div class="tickets" id="tickets"></div>
+    </div>
+  </section>
+
+  <section class="ig">
+    <div class="wrap">
+      <h2>@cookiesandcream716</h2>
+      <a class="btn ink" href="https://www.instagram.com/cookiesandcream716/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="checker" aria-hidden="true"></div>
+  <div class="wrap foot">
+    <div><p style="max-width:32ch;font-size:1.1rem">Hand-scooped ice cream and warm cookies in Buffalo. Come hungry.</p></div>
+    <div id="footLocs" style="display:contents"></div>
+    <div><h4>More</h4><p><a href="menu.html">Menu</a><br><a href="parties.html">Parties</a><br><a href="book.html">Book a party</a><br><a href="https://www.instagram.com/cookiesandcream716/" target="_blank" rel="noopener">Instagram</a></p></div>
+  </div>
+  <div class="wrap fine"><span>© <span id="yr"></span> Cookies &amp; Cream, Buffalo NY</span><span>Made with sprinkles</span></div>
+  <div class="wordmark" aria-hidden="true">Cookies &amp; Cream</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

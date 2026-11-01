@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu · Cookies & Cream</title>
+<meta name="description" content="Cookie sundaes, hand-scooped flavours, shakes and ice cream cookie cakes at Cookies & Cream in Buffalo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Gochi+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Cookies &amp; Cream</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlist" aria-label="Open menu">☰</button>
+    <nav aria-label="Main">
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+        <li><a href="parties.html">Parties</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="book.html" class="btn cherry">Book a party</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="ticker" aria-hidden="true"><div id="tickerRow"></div></div>
+
+<main>
+  <!-- BACKGROUND IMAGE: ice cream case or candy-jar wall (landscape). Set data-src. -->
+  <div class="phead slot bgimg" data-src="" data-label="Background: ice cream case or candy jars"><div class="wrap">
+    <h1>The menu</h1>
+    <p class="sub">Copied off our chalkboards. Flavours rotate, so the case may look a little different when you come in. Gluten-free cookies are usually available.</p>
+  </div></div>
+  <section style="padding-top:48px">
+    <div class="wrap">
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="sundaes">Sundaes</button>
+        <button role="tab" aria-selected="false" data-tab="scoops">Scoops</button>
+        <button role="tab" aria-selected="false" data-tab="cakes">Cookies &amp; cakes</button>
+      </div>
+
+      <div class="pane on" id="tab-sundaes" role="tabpanel">
+        <div class="boards">
+          <div class="board">
+            <h3>Cookie sundaes</h3>
+            <ol><li>Chocolate chip</li><li>Reese's PB cup cookie</li><li>M&amp;M cookie</li><li>Warm brownie</li></ol>
+            <h3>Build your own</h3>
+            <ul><li>Pick your cookie</li><li>2 scoops</li><li>2 toppings</li></ul>
+          </div>
+          <div class="board">
+            <h3>Traditional sundae</h3>
+            <ul><li>Hot fudge</li><li>Peanut butter</li><li>Strawberry</li><li>Caramel</li></ul>
+            <h3>Toppings</h3>
+            <p style="font-size:1.35rem">Sprinkles, crushed Oreo, M&amp;Ms, Reese's, gummy bears, nuts, cherries</p>
+            <p class="note">Every sundae gets whipped cream and a cherry.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane" id="tab-scoops" role="tabpanel">
+        <!-- EDIT: the FLAVORS list in the script fills the case -->
+        <div class="case" id="flavorCase"></div>
+        <div class="list">
+          <div><h4>Cup or cone</h4><p>One, two or three scoops. Waffle cones available.</p></div>
+          <div><h4>Shakes</h4><p>Any flavour from the case, blended thick.</p></div>
+          <div><h4>Hand-packed pints</h4><p>Any flavour in the case, packed to take home.</p></div>
+          <div><h4>Ice cream sandwiches</h4><p>A scoop between two of our cookies.</p></div>
+          <div><h4>Novelties</h4><p>Grab-and-go treats from the freezer.</p></div>
+        </div>
+      </div>
+
+      <div class="pane" id="tab-cakes" role="tabpanel">
+        <div class="list" style="margin-top:0">
+          <div><h4>Ice cream cookie cake, 6"</h4><p>Cookie crust, your choice of ice cream, frosting and sprinkles.</p></div>
+          <div><h4>Ice cream cookie cake, 10"</h4><p>Party size. Pre-order at least 48 hours ahead.</p></div>
+          <div><h4>Frosted sugar cookies</h4><p>Soft sugar cookie, buttercream, sprinkles.</p></div>
+          <div><h4>Bills tailgate 12-pack</h4><p>A dozen frosted sugar cookies in Bills colours.</p></div>
+          <div><h4>Fresh-baked cookies</h4><p>Chocolate chip, M&amp;M, Reese's and more.</p></div>
+          <div><h4>Gluten-free cookies</h4><p>Ask at the counter. They sell out fast.</p></div>
+        </div>
+        <p style="margin-top:28px"><a href="locations.html" class="btn ink">Call a shop to pre-order</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="checker" aria-hidden="true"></div>
+  <div class="wrap foot">
+    <div><p style="max-width:32ch;font-size:1.1rem">Hand-scooped ice cream and warm cookies in Buffalo. Come hungry.</p></div>
+    <div id="footLocs" style="display:contents"></div>
+    <div><h4>More</h4><p><a href="menu.html">Menu</a><br><a href="parties.html">Parties</a><br><a href="book.html">Book a party</a><br><a href="https://www.instagram.com/cookiesandcream716/" target="_blank" rel="noopener">Instagram</a></p></div>
+  </div>
+  <div class="wrap fine"><span>© <span id="yr"></span> Cookies &amp; Cream, Buffalo NY</span><span>Made with sprinkles</span></div>
+  <div class="wordmark" aria-hidden="true">Cookies &amp; Cream</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
