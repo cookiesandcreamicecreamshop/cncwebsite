@@ -73,7 +73,7 @@ function renderLocations(){
         <div class="loc-body">
           <span style="justify-self:start">${pill(S[i])}</span>
           <p><b>${l.street}</b><br>${l.city}${l.phone?`<br><a href="${tel(l.phone)}">${l.phone}</a>`:''}</p>
-          <table class="hours">${[2,3,4,5,6,0,1].map(d=>{const h=l.hours[d];return `<tr class="${d===today?'today':''}"><td>${DAYS[d]}</td><td>${h?fmt(h[0])+'–'+fmt(h[1]):'Closed'}</td></tr>`}).join('')}</table>
+          <details class="hrs" ${innerWidth>700?'open':''}><summary>Hours this week</summary><table class="hours">${[2,3,4,5,6,0,1].map(d=>{const h=l.hours[d];return `<tr class="${d===today?'today':''}"><td>${DAYS[d]}</td><td>${h?fmt(h[0])+'–'+fmt(h[1]):'Closed'}</td></tr>`}).join('')}</table></details>
           <div class="ctas"><a class="btn ink" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${q(l)}">Get directions</a>${l.phone?`<a class="btn" href="${tel(l.phone)}">Call</a>`:''}</div>
         </div>
         <iframe title="Map of ${l.name}" loading="lazy" src="https://www.google.com/maps?q=${q(l)}&output=embed"></iframe>

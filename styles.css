@@ -265,3 +265,97 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
 .bgimg[data-loaded]::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,242,245,.92) 0%,rgba(255,242,245,.75) 55%,rgba(255,242,245,.35) 100%);z-index:0}
 .bgimg .tag{left:auto;right:20px;top:auto;bottom:20px;transform:none}
 @media (max-width:640px){.bgimg{padding:80px 0 72px}.bgimg .tag{right:12px;bottom:12px}}
+
+/* =========================================================
+   PHONES — tighter spacing, swipeable card rows, compact cards
+   ========================================================= */
+.swipe-hint{display:none}
+@media (max-width:700px){
+  body{font-size:16px}
+  section{padding:60px 0}
+  .head{margin-bottom:24px}
+  .head .sub{margin-top:8px}
+  .phead{padding:48px 0 36px}
+  .bgimg{padding:56px 0 52px}
+  .nav{height:64px}
+  header .logo{font-size:1.3rem}
+  nav ul{inset:64px 0 auto}
+  .ticker div{padding:8px 0;font-size:.92rem}
+  .btn{padding:.75rem 1.2rem;font-size:.96rem}
+
+  /* hero: headline, buttons and a small polaroid all on screen */
+  .hero{padding:32px 0 44px}
+  .hero-grid{gap:32px}
+  .hero .sub{margin:14px 0 20px}
+  .status{margin-top:16px}
+  .pill{font-size:.84rem;padding:.25rem .7rem}
+  .collage{width:min(210px,58vw)}
+  .collage .badge{width:84px;height:84px;right:-26px;top:-22px}
+  .collage .badge .core{inset:19px;font-size:1rem}
+  .polaroid{padding:9px 9px 38px}
+  .polaroid .cap{font-size:1.1rem;bottom:9px}
+  .polaroid::before{width:70px;margin-left:-35px;height:22px;top:-11px}
+
+  /* swipeable rows instead of tall stacks */
+  .favs,.pkgs,.steps{display:flex;grid-template-columns:none;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin-right:-20px;padding:4px 20px 10px 0;scrollbar-width:none;max-width:none}
+  .favs::-webkit-scrollbar,.pkgs::-webkit-scrollbar,.steps::-webkit-scrollbar{display:none}
+  .fav{flex:0 0 76%;min-height:0;scroll-snap-align:start;padding:22px 20px}
+  .fav h3{font-size:1.45rem}
+  .fav .scoop{width:44px;height:41px}
+  .pkg{flex:0 0 84%;scroll-snap-align:start}
+  .pkg .top{padding:20px 20px 16px}
+  .pkg .top h3{font-size:1.45rem}
+  .pkg ul{padding:16px 20px 4px}
+  .pkg .btn{margin:14px 20px 20px}
+  .steps div{flex:0 0 72%;scroll-snap-align:start;padding:18px}
+  .swipe-hint{display:block;font-size:.85rem;opacity:.6;margin:-12px 0 14px}
+
+  /* party sections */
+  .party-grid{gap:36px}
+  .party-grid .polaroid{max-width:240px}
+  .phero{padding:44px 0 56px}
+  .chips{margin-bottom:22px}
+  .chips li,.facts span{font-size:.9rem;padding:.3rem .8rem}
+
+  /* menu */
+  .tabs{display:flex;width:100%;flex-wrap:nowrap;margin-bottom:24px}
+  .tabs button{flex:1;padding:.55rem .3rem;font-size:.88rem;white-space:nowrap}
+  .boards{gap:18px}
+  .board{padding:22px;border-width:8px}
+  .board h3{font-size:1.5rem}
+  .board ul,.board ol{font-size:1.15rem}
+  .case{gap:10px}
+  .tub i{height:44px}
+  .tub span{font-size:.88rem;padding:.5rem .65rem}
+
+  /* locations */
+  .tickets{gap:16px}
+  .ticket .main{padding:20px}
+  .ticket h3{font-size:1.4rem}
+  .ticket .stub{padding:16px 20px;flex-direction:row;flex-wrap:wrap;align-items:center}
+  .locs{gap:20px}
+  .loc .top{padding:18px 20px}
+  .loc .slot{height:150px}
+  .loc-body{padding:18px 20px;gap:12px}
+  .loc iframe{height:170px}
+
+  /* booking */
+  form{padding:22px 18px}
+  fieldset{margin-bottom:20px}
+  legend{font-size:1.2rem}
+  .choice,.choice.two{grid-template-columns:1fr 1fr;gap:8px}
+  .choice label{padding:11px;font-size:.84rem}
+  .choice label:last-child:nth-child(odd){grid-column:1/-1}
+  .adds label{font-size:.88rem;padding:.4rem .8rem}
+  aside.summary{padding:22px;position:static}
+
+  .foot{padding:44px 0 24px;gap:22px}
+}
+/* hours: collapsible on phones, always open on desktop */
+.hrs summary{display:none}
+@media (max-width:700px){
+  .hrs summary{display:flex;justify-content:space-between;cursor:pointer;font-weight:700;list-style:none;padding:.5rem 0;border-top:1.5px solid #2a2e3530}
+  .hrs summary::after{content:"+";font-family:var(--display);color:var(--cherry)}
+  .hrs[open] summary::after{content:"–"}
+}
