@@ -8,10 +8,10 @@ It's plain HTML, CSS and JavaScript, so it runs on GitHub Pages with no build st
 | File | What it is |
 |---|---|
 | `index.html` | Home page (newsletter popup, quick links, photos, addresses, gift cards) |
-| `menu.html` | Menu with the five tabs |
-| `order.html` | Delivery apps for each shop |
-| `parties.html` | Party packages and the party request form |
-| `classes.html` | Cookie decorating classes |
+| `menu/index.html` | Menu with the five tabs (`/menu/`) |
+| `order/index.html` | Delivery apps for each shop (`/order/`) |
+| `parties/index.html` | Party packages and the party request form (`/parties/`) |
+| `classes/index.html` | Cookie decorating classes (`/classes/`) |
 | `js/config.js` | **Where your forms send their data. This is the only file you need to edit to connect forms.** |
 | `js/forms.js` | Sends the newsletter and party forms |
 | `js/runtime.js` | Small script that draws each page and makes buttons and tabs work |
@@ -90,7 +90,11 @@ These are links, not forms. Set them by editing the HTML (search for `href="#"`)
 - **Classes page:** the three "Reserve" buttons. Use a Square Appointments link, or a Square payment link per class.
 - **Order page:** each shop's DoorDash, Uber Eats and Grubhub links.
 
-Also replace the remaining `[PRICE]`, `[Hours]`, `[Phone]` and `[Add detail]` placeholders, and add your photos: drop them into `assets/photos/` using the file names in `assets/photos/PHOTOS.md`. Each photo replaces its placeholder automatically.
+Also replace the remaining `[PRICE]`, `[Phone]` and `[Add detail]` placeholders, and add your photos: drop them into `assets/photos/` using the file names in `assets/photos/PHOTOS.md`. Each photo replaces its placeholder automatically.
+
+The Elmwood and Seneca shop hours are shown in the Visit section of `index.html`. The page-specific delivery links are in `order/index.html`, in the `delLinks` object inside `Component`.
+
+The `.html` page URLs redirect to their clean folder routes to keep existing bookmarks working.
 
 ## Editing later
 
